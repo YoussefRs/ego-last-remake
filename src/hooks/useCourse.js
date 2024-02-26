@@ -13,7 +13,7 @@ const useCourse = (req) => {
       duration: "4 years",
       location: "In Campus",
       media: {
-        type: "video",
+        type: "image",
         source: "https://images.ctfassets.net/8bbwomjfix8m/3khjUHELqiZJVgdkpXSAZf/17faf9504845ad605296527fa90d8993/civil.jpg?fit=fill&w=1366&h=446&fm=jpg",
       },
       description:
@@ -28,8 +28,8 @@ const useCourse = (req) => {
       duration: "3 years",
       location: "Online",
       media: {
-        type: "video",
-        source: "https://www.youtube.com/embed/h9KXaahESas",
+        type: "image",
+        source: "https://alemnishokran.com/wp-content/uploads/2023/10/Textile-Engineering-Major.png",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum pellentesque urna. Phasellus adipiscing et massa et aliquam. Ut odio magna, interdum quis dolor non, tristique vestibulum nisi. Nam accumsan convallis venenatis. Nullam posuere risus odio, in interdum felis venenatis sagittis. Integer malesuada porta fermentum. Sed luctus nibh sed mi auctor imperdiet. Cras et sapien rhoncus, pulvinar dolor sed, tincidunt massa. Nullam fringilla mauris non risus ultricies viverra. Donec a turpis non lorem pulvinar posuere.",
@@ -44,7 +44,7 @@ const useCourse = (req) => {
       location: "Hybrid",
       media: {
         type: "image",
-        source: cse,
+        source: "https://www.ncerpune.in/computer/images/CSE-banner.jpg",
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum pellentesque urna. Phasellus adipiscing et massa et aliquam. Ut odio magna, interdum quis dolor non, tristique vestibulum nisi. Nam accumsan convallis venenatis. Nullam posuere risus odio, in interdum felis venenatis sagittis. Integer malesuada porta fermentum. Sed luctus nibh sed mi auctor imperdiet. Cras et sapien rhoncus, pulvinar dolor sed, tincidunt massa. Nullam fringilla mauris non risus ultricies viverra. Donec a turpis non lorem pulvinar posuere.",

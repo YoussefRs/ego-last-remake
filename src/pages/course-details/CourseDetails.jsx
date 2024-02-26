@@ -18,6 +18,11 @@ const CourseDetails = () => {
   const [course, setCourse] = useState();
   const [courseId, setCourseId] = useState(null);
   const location = useLocation();
+  const [activeTab, setActiveTab] = useState("tabone");
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+  };
 
   useEffect(() => {
     const path = location.pathname;
@@ -35,7 +40,7 @@ const CourseDetails = () => {
   if (!course) {
     return;
   }
-  
+
   return (
     <div className="content container">
       <div className="page-wrapper">
@@ -49,7 +54,7 @@ const CourseDetails = () => {
         />
       </div>
       <div className="page-content">
-        <div className="row page-row">
+        <div className="row page-row gap-4">
           {/* <div className="course-wrapper col-lg-8 col-md-7">
             <article className="course-item">
               {course.media.type === "video" ? (
@@ -109,20 +114,88 @@ const CourseDetails = () => {
             <EnquireWidget />
           </aside> */}
           <section class="ban_sec">
-		<div class="container p-0">
-			<div class="ban_img">
-	<img src={course.media.source} alt="banner" border="0" />
-				<div class="ban_text">
-					<strong>
-						<span>Meeting current</span><br /> needs now
-					</strong>
-					<p>You can prioritize a child’s mental, emotional, <br />
-						behavioral, and physical health </p>
-					<a href="#">Lend a hand</a>
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="container p-0">
+              <div class="ban_img">
+                <img src={course.media.source} alt="banner" border="0" />
+                <div class="ban_text">
+                  <strong>
+                    <span>Meeting current</span>
+                    <br /> needs now
+                  </strong>
+                  <p>
+                    You can prioritize a child’s mental, emotional, <br />
+                    behavioral, and physical health{" "}
+                  </p>
+                  <a href="#">Apply</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="tabs col">
+            <input
+              type="radio"
+              name="tabs"
+              id="tabone"
+              checked={activeTab === "tabone"}
+              onChange={() => handleTabChange("tabone")}
+            />
+            <label for="tabone">overview</label>
+            <div class="tab">
+              <h1>Tab One Content</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation{" "}
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea{" "}
+              </p>
+            </div>
+
+            <input
+              type="radio"
+              name="tabs"
+              id="tabtwo"
+              checked={activeTab === "tabtwo"}
+              onChange={() => handleTabChange("tabtwo")}
+            />
+            <label for="tabtwo">Cirriculum</label>
+            <div class="tab">
+              <h1>Tab Two Content</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+
+            <input
+              type="radio"
+              name="tabs"
+              id="tabthree"
+              checked={activeTab === "tabthree"}
+              onChange={() => handleTabChange("tabthree")}
+            />
+            <label for="tabthree">Instructor</label>
+            <div class="tab">
+              <h1>Tab Three Content</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+
+          <div className="col-3">
+            <div className="mb-3">
+              <ApplyWidget />
+            </div>
+            <EnquireWidget />
+          </div>
         </div>
       </div>
     </div>
