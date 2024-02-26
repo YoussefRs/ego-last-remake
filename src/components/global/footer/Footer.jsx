@@ -6,6 +6,7 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"; // Import necessary icons
+import { Link } from "react-router-dom";
 // import "./styles.css";
 
 const Footer = () => {
@@ -19,16 +20,24 @@ const Footer = () => {
                 <h3>About</h3>
                 <ul>
                   <li className="red_hover hov_pointer">
-                    <FontAwesomeIcon icon={faCaretRight} /> About us
+                    <Link to={"/about"}>
+                      <FontAwesomeIcon icon={faCaretRight} /> About us
+                    </Link>
                   </li>
                   <li className="red_hover hov_pointer">
-                    <FontAwesomeIcon icon={faCaretRight} /> Contact us
+                    <Link to={"/contact"}>
+                      <FontAwesomeIcon icon={faCaretRight} /> Contact us
+                    </Link>
                   </li>
                   <li className="red_hover hov_pointer">
-                    <FontAwesomeIcon icon={faCaretRight} /> Privacy policy
+                    <Link to={"/privacy"}>
+                      <FontAwesomeIcon icon={faCaretRight} /> Privacy policy
+                    </Link>
                   </li>
                   <li className="red_hover hov_pointer">
-                    <FontAwesomeIcon icon={faCaretRight} /> Terms & Conditions
+                    <Link to={"/terms"}>
+                      <FontAwesomeIcon icon={faCaretRight} /> Terms & Conditions
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -25,17 +25,17 @@ const SideMenu = ({ show, handleShow }) => {
       <br />
       <ul className="p-0">
         <li>
-          <a href="#">Home</a>
+          <Link>Home</Link>
         </li>
         <li className="dropdown">
-          <a href="javascript:void(0)">All Departments</a>
+          <Link>All Departments</Link>
           <aside>
-            <a href="#">example</a>
-            <a href="#">example</a>
+            <Link>example</Link>
+            <Link>example</Link>
           </aside>
         </li>
         <li>
-          <a href="#">E-Portal</a>
+          <Link>E-Portal</Link>
         </li>
         <li>
           <Link to={"/contact"}>Contact Us</Link>
@@ -44,12 +44,8 @@ const SideMenu = ({ show, handleShow }) => {
           <Link to={"/about"}>About Us</Link>
         </li>
         <li className="fixed_flex">
-          <a href="javascript:void(0)" className="_btn btn_1 chat_popup">
-            SignUp/LogIn
-          </a>
-          <a href="#" className="_btn btn_2 chat_popup">
-            Admission
-          </a>
+          <Link className="_btn btn_1 chat_popup">SignUp/LogIn</Link>
+          <Link className="_btn btn_2 chat_popup">Admission</Link>
         </li>
       </ul>
     </menu>

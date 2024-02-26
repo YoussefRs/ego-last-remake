@@ -1,0 +1,21 @@
+.back-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #046635; /* Blue color, you can change it */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 5px 7px 0;
+  cursor: pointer;
+  outline: none; /* Remove default focus style */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.back-to-top-button svg {
+    width: 2vw;
+    height: 2vw;
+}
+
+.back-to-top-button:hover {
+  background-color: #046635ab; /* Darker blue on hover */
+}

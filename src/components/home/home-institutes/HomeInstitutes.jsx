@@ -48,12 +48,16 @@ const HomeInstitutes = () => {
               </div>
               <blockquote className="quote mt-3">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                  eius iure nam? Necessitatibus facilis libero, soluta unde sunt
-                  cupiditate nobis, atque maxime optio exercitationem ipsam
-                  voluptates corrupti, cumque beatae temporibus esse nihil
-                  sapiente porro minus nemo suscipit! Voluptatum deserunt
-                  necessitatibus voluptatem dolor amet quod?
+                  Pegaso Online University deals with the internationalisation
+                  of Università Telematica Pegaso, the first Italian player in
+                  the field of distance education, and thus aims at providing
+                  its educational offer in the English language in every country
+                  of the world. Pegaso Online University is innovative and
+                  accessible for everyone. It is strongly focused on a worldwide
+                  development, counting on its remarkable technological
+                  flexibility, that meets educational needs even from the
+                  farthest area of the World, About us with lifelong learning at
+                  the heart of its work.
                 </p>
               </blockquote>
             </div>

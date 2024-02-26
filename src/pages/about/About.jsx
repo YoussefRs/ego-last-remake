@@ -1,22 +1,30 @@
-import React from "react";
-import AboutHeader from "../../components/about/about-header/AboutHeader";
+import React from "react";  
 import AboutWelcome from "../../components/about/about-welcome/AboutWelcome";
-import AboutJobVacancies from "../../components/about/about-job-vacancies/AboutJobVacancies";
-import AboutVideoTour from "../../components/about/about-video-tour/AboutVideoTour";
-import AboutContact from "../../components/about/about-contact/AboutContact";
+import withHelmet from "../../hoc/withHelmet.jsx";
+import SubHeader from "../../components/global/sub-header/SubHeader.jsx";
+import ContactWidget from "../../components/widgets/contact-widget/ContactWidget.jsx";
+import useJobs from "../../hooks/useJobs.js";
+import JobsOtherWidget from "../../components/widgets/jobs-other-widget/JobsOtherWidget.jsx";
+import VideoTourWidget from "../../components/widgets/video-tour-widget/VideoTourWidget.jsx";
 
 const About = () => {
   return (
-    <div class="content container">
-      <div class="page-wrapper">
-        <AboutHeader />
-        <div class="page-content">
-          <div class="row page-row">
+    <div className="content container">
+      <div className="page-wrapper">
+        <SubHeader
+          title={"About"}
+          path={[{ url: "/", label: "Home" }]}
+          current={"About"}
+        />
+        <div className="page-content">
+          <div className="row page-row">
             <AboutWelcome />
-            <aside class="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
-              <AboutJobVacancies />
-              <AboutVideoTour />
-              <AboutContact />
+            <aside className="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
+              <JobsOtherWidget
+                jobs={useJobs({ type: "random" })}
+              />
+              <VideoTourWidget />
+              <ContactWidget />
             </aside>
           </div>
         </div>
@@ -25,4 +33,5 @@ const About = () => {
   );
 };
 
-export default About;
+export default withHelmet(About);
+// export default About;

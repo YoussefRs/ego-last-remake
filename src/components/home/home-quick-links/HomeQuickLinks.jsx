@@ -1,10 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const HomeQuickLinks = () => {
   return (
-    <section className="links rounded shadow mb-4">
+    <section className="links rounded shadow">
       <h1 className="section-heading text-highlight">
         <span className="line">Quick Links</span>
       </h1>
@@ -22,16 +23,16 @@ const HomeQuickLinks = () => {
           </a>
         </p>
         <p>
-          <a href="#">
+          <Link to={"/jobs"}>
             <FontAwesomeIcon icon={faCaretRight} />
-            Job Vacancies
-          </a>
+            Jobs
+          </Link>
         </p>
         <p>
-          <a href="#">
+          <Link to={"/contact"}>
             <FontAwesomeIcon icon={faCaretRight} />
             Contact
-          </a>
+          </Link>
         </p>
       </div>
     </section>

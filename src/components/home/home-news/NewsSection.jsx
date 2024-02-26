@@ -13,10 +13,6 @@ import news4 from "../../../assets/images/news/news-thumb-4.jpg";
 import news5 from "../../../assets/images/news/news-thumb-5.jpg";
 import news6 from "../../../assets/images/news/news-thumb-6.jpg";
 
-import info from "../../../assets/images/courses/info.jpg"
-import civil from "../../../assets/images/courses/civil.jpg";
-import eco from "../../../assets/images/courses/eco.jpg";
-import sports from "../../../assets/images/courses/sports.jpg";
 
 const NewsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -43,30 +39,30 @@ const NewsSection = () => {
           <span class="ball"></span>
           <div class = 'd-flex align-items-center justify-content-center gap-5'>
     <div class = 'photo'>
-        <img src = {info} class = 'image' />
+        <img src = "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3AtMjAwLWV5ZS0wMzQyNzAyLmpwZw.jpg" class = 'image' />
         <div class = 'caption'>
-            Manchester Skyline
+            Informatics
         </div>    
     </div>
     
     <div class = 'photo'>
-        <img src = {civil} class = 'image' />
+        <img src = "https://media.istockphoto.com/id/1333158315/photo/civil-engineer-jobs-double-exposure-of-project-management-team-and-construction-site-with.jpg?b=1&s=612x612&w=0&k=20&c=vGQC6UQgNxp3bgZ-y3CKB96t1-93GnakM_8U-Rbh8Tw=" class = 'image' />
         <div class = 'caption'>
-            GMex - Manchester
+            Civil engineering
         </div>
     </div>
     
     <div class = 'photo'>
-        <img src = {eco} class = 'image'/>
+        <img src ="https://www.collegevaluesonline.com/wp-content/uploads/2021/03/shutterstock_328883171.jpg" class = 'image'/>
         <div class = 'caption'>
-            Manchester Nightlife
+            Economics
         </div>
     </div>
     
     <div class = 'photo'>
-        <img src = {sports} class = 'image' />
+        <img src = "https://uscenterforsafesport.org/wp-content/uploads/2022/08/FeaturedImage_Home_080922.png" class = 'image' />
         <div class = 'caption'>
-            Old Trafford
+            Sports
         </div>
     </div>
 </div>

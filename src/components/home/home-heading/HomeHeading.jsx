@@ -15,7 +15,7 @@ export default function HomeHeading() {
             placerat eu lorem ut, suscipit commodo augue.
           </p>
         </div>
-        <div className="col-lg-3 col-12 d-flex align-item-center justify-content-center">
+        <div className="col-lg-3 col-12">
           <a className="_btn btn-cta" href="all-pages/registration.html">
             <FontAwesomeIcon icon={faPlayCircle} />
             Apply Now
