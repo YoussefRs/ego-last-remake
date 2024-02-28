@@ -46,6 +46,22 @@ p {
   color: #444;
   font-size: 15px;
 }
+.home_content_right {
+  height: 100%;
+  padding: 1rem 0 1rem 1rem;
+  clear: both;
+  display: table;
+}
+.right_box {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 9px 38px 0px #cdd2ff;
+  float: right;
+  position: sticky;
+  top: 90px;
+}
+
 a {
   /* color: #046635 !important; */
   transition: all 0.4s ease-in-out;
@@ -471,12 +487,14 @@ ul.custom-list-style li {
 .box {
   background: #f5f5f5;
   padding: 30px;
+  border-radius: 20px;
 }
 .box.box-border {
   border-left: 5px solid #046635;
 }
 .box.box-dark {
   background: #444;
+  border-radius: 20px;
   color: #fff;
 }
 .box.box-theme {
@@ -931,7 +949,7 @@ marquee {
   margin: 0;
 }
 .page-wrapper .breadcrumbs ul li {
-  color: #046635;
+  color: #fff;
   font-size: 12px;
   float: left;
   list-style: none;
@@ -940,14 +958,14 @@ marquee {
 .page-wrapper .breadcrumbs ul li a {
   display: inline-block;
   padding: 0 5px;
-  color: #aaa;
+  color: white;
 }
 .page-wrapper .breadcrumbs ul li a:hover {
   color: #365d7e;
 }
 .page-wrapper .breadcrumbs ul li.breadcrumbs-label {
   padding-right: 0;
-  color: #aaa;
+  color: #fff;
 }
 .page-wrapper .breadcrumbs ul li.current {
   max-width: 250px;
@@ -957,7 +975,7 @@ marquee {
 }
 .page-wrapper .breadcrumbs ul li .svg-inline--fa {
   margin-right: 5px;
-  color: #aaa;
+  color: #fff;
 }
 .page-wrapper ul li {
   margin-bottom: 5px;
@@ -1345,6 +1363,9 @@ marquee {
   background: #fff;
   position: absolute;
   left: 0;
+}
+.courses-img {
+  height: 100px !important;
 }
 .home-page .events .event-item h2.title {
   margin-bottom: 20px;
@@ -2404,7 +2425,7 @@ nav .ham:hover {
 footer {
   background-color: var(--primary_dark);
   color: var(--lite);
-  margin-top: 15rem;
+  margin-top: 4rem;
   position: relative;
 }
 
@@ -3551,6 +3572,7 @@ header section aside:nth-child(3) {
     width: 200px;
     overflow: hidden;
     transition: 0.5s;
+    border-radius: 20px;
     
 }
 
@@ -3601,13 +3623,16 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
 
 .ban_sec {
   width: 100%;
+  border-radius: 20px;
 }
 .ban_img {
   width: 100%;
-  position: relative;
+  position: relative
+  
 }
 .ban_img img {
   width: 100%;
+  max-height: 500px;
 }
 .ban_text {
   position: absolute;
@@ -3618,6 +3643,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+  width: 50%;
 }
 .ban_text strong {
   font: 800 62.22px/70px "Montserrat", sans-serif;
@@ -3701,7 +3727,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
 }
 @media only screen and (max-width: 575px) {
   .ban_text strong {
-    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     width: 100%;
     display: block;
@@ -3715,6 +3740,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   }
   .ban_text {
     left: 2%;
+    width: 100%;
   }
 }
 
@@ -3736,12 +3762,14 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   display: block;
   padding: 1rem 2rem;
   margin-right: 0.2rem;
-  height: 50px;
+  height: 60px;
   cursor: pointer;
-  background: #90CAF9;
+  background: #046635;
+  color: white;
   font-weight: bold;
   -webkit-transition: background ease 0.2s;
   transition: background ease 0.2s;
+  border-radius: 20px;
 }
 
 .tabs .tab {
@@ -3758,6 +3786,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   display: none;
   padding: 1rem;
   background: #fafafa;
+  
+  
 }
 
 .tabs input[type="radio"] {
@@ -3765,7 +3795,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   opacity: 0;
 }
 
-.tabs input[type="radio"]:checked + label { background: #fafafa; }
+.tabs input[type="radio"]:checked + label { background: #fafafa; border: 1px solid #046635; color: #046635; border-radius: 20px;}
 
 .tabs input[type="radio"]:checked + label + .tab { display: block; }
  @media (max-width: 45em) {
@@ -3775,12 +3805,14 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 57%, rgba(255,
   -webkit-order: initial;
   -ms-flex-order: initial;
   order: initial;
+  
 }
 
 .tabs label {
   width: 100%;
   margin-right: 0;
   margin-top: 0.2rem;
+  
 }
 }
 

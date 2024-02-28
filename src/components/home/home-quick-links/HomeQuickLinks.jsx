@@ -22,12 +22,12 @@ const HomeQuickLinks = () => {
             Gallery
           </a>
         </p>
-        <p>
+        {/* <p>
           <Link to={"/jobs"}>
             <FontAwesomeIcon icon={faCaretRight} />
             Jobs
           </Link>
-        </p>
+        </p> */}
         <p>
           <Link to={"/contact"}>
             <FontAwesomeIcon icon={faCaretRight} />

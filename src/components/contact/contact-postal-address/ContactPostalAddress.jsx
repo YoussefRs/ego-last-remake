@@ -6,15 +6,13 @@ const ContactPostalAddress = () => {
       <h3 className="title">Postal Address</h3>
       <p className="adr">
         <span className="adr-group">
-          <span className="street-address">
-            Shyamoli Engineering University
+          <span className="street-address">Ego Education</span>
+          <br />
+          <span className="region">
+            {" "}
+            40, Villa Fairholme, Sir Augustus Bartolo Street, Ta’ Xbiex XBX
+            1095, Malta
           </span>
-          <br />
-          <span className="region">Mandari</span>
-          <br />
-          <span className="postal-code">Sadar- Lakshmipur</span>
-          <br />
-          <span className="country-name">Bangladesh</span>
         </span>
       </p>
     </section>

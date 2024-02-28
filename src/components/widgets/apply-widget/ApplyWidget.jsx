@@ -1,20 +1,23 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const ApplyWidget = () => {
   return (
-    <section className="widget has-divider">
+    <section className="widget has-divider mb-3">
       <h3 className="title">Why Ego-Education ?</h3>
       <p>
-        Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi
-        tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut
-        purus.
+        With the new eGO brand, Ieli intends to initiate this
+        internationalization process through highly specialized, innovative and
+        professionalizing courses for active employment research.
       </p>
-      <Link className="btn apply-btn rounded">
-        <FontAwesomeIcon icon={faDownload} /> Apply now
-      </Link>
+      <div className="d-flex align-items-center justify-content-start">
+        <a className="_btn btn-cta" href="/enrollment">
+          <FontAwesomeIcon icon={faPlayCircle} />
+          Apply Now
+        </a>
+      </div>
     </section>
   );
 };

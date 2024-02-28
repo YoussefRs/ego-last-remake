@@ -30,8 +30,8 @@ const NewDetails = () => {
     return;
   }
   return (
-    <div class="content container">
-      <div class="page-wrapper">
+    <div className="content container">
+      <div className="page-wrapper">
         <SubHeader
           title={item.title}
           path={[
@@ -40,20 +40,20 @@ const NewDetails = () => {
           ]}
           current={item.title.split(" ")[0]}
         />
-        <div class="page-content">
-          <div class="row page-row">
-            <div class="news-wrapper col-lg-8 col-md-7 col-12">
-              <article class="news-item">
-                <p class="meta text-muted">
+        <div className="page-content">
+          <div className="row page-row">
+            <div className="news-wrapper col-lg-8 col-md-7 col-12">
+              <article className="news-item">
+                <p className="meta text-muted">
                   By: <Link>{item.author} </Link> | Posted on: {item.postedDate}
                 </p>
-                <p class="featured-image">
-                  <img class="img-fluid new-img" src={item.image} alt="" />
+                <p className="featured-image">
+                  <img className="img-fluid new-img" src={item.image} alt="" />
                 </p>
                 {item.articles.map((itm, i) => (
                   <p key={i}>{itm}</p>
                 ))}
-                <p class="box">
+                <p className="box">
                   {item.summary}
                   <br />
                   <Link to={item.additionalLink.url}>
@@ -62,7 +62,7 @@ const NewDetails = () => {
                 </p>
               </article>
             </div>
-            <aside class="page-sidebar col-lg-3 offset-lg-1 col-md-4 offset-md-1 col-12">
+            <aside className="page-sidebar col-lg-3 offset-lg-1 col-md-4 offset-md-1 col-12">
               <OtherNewsWidget toIgnore={itemId} />
               <UpcomingEventsWidget />
             </aside>

@@ -26,57 +26,61 @@ const NewsSection = () => {
   };
   return (
     <section className="news mb-4">
-      <div class="divisions division_4" onmousemove="animate_balls(event)">
-        <div class="title_header mb-4">
-          <h2 class="title medium">
+      <div className="divisions division_4" onmousemove="animate_balls(event)">
+        <div className="title_header mb-4">
+          <h2 className="title medium">
             OPPORTUNITIES DON’T HAPPEN, YOU CREATE THEM
           </h2>
         </div>
-        <div class="cards">
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <div class = 'd-flex align-items-center justify-content-center gap-5'>
-    <div class = 'photo'>
-        <img src = "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3AtMjAwLWV5ZS0wMzQyNzAyLmpwZw.jpg" class = 'image' />
-        <div class = 'caption'>
-            Informatics
-        </div>    
-    </div>
-    
-    <div class = 'photo'>
-        <img src = "https://media.istockphoto.com/id/1333158315/photo/civil-engineer-jobs-double-exposure-of-project-management-team-and-construction-site-with.jpg?b=1&s=612x612&w=0&k=20&c=vGQC6UQgNxp3bgZ-y3CKB96t1-93GnakM_8U-Rbh8Tw=" class = 'image' />
-        <div class = 'caption'>
-            Civil engineering
-        </div>
-    </div>
-    
-    <div class = 'photo'>
-        <img src ="https://www.collegevaluesonline.com/wp-content/uploads/2021/03/shutterstock_328883171.jpg" class = 'image'/>
-        <div class = 'caption'>
-            Economics
-        </div>
-    </div>
-    
-    <div class = 'photo'>
-        <img src = "https://uscenterforsafesport.org/wp-content/uploads/2022/08/FeaturedImage_Home_080922.png" class = 'image' />
-        <div class = 'caption'>
-            Sports
-        </div>
-    </div>
-</div>
-          {/* <section class="fixed_flex">
-            <figure class="flex_content">
+        <div className="cards">
+          <span className="ball"></span>
+          <span className="ball"></span>
+          <span className="ball"></span>
+          <span className="ball"></span>
+          <div className="d-flex align-items-center justify-content-center gap-5">
+            <div className="photo">
+              <img
+                src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3AtMjAwLWV5ZS0wMzQyNzAyLmpwZw.jpg"
+                className="image"
+              />
+              <div className="caption">Informatics</div>
+            </div>
+
+            <div className="photo">
+              <img
+                src="https://media.istockphoto.com/id/1333158315/photo/civil-engineer-jobs-double-exposure-of-project-management-team-and-construction-site-with.jpg?b=1&s=612x612&w=0&k=20&c=vGQC6UQgNxp3bgZ-y3CKB96t1-93GnakM_8U-Rbh8Tw="
+                className="image"
+              />
+              <div className="caption">Civil engineering</div>
+            </div>
+
+            <div className="photo">
+              <img
+                src="https://www.collegevaluesonline.com/wp-content/uploads/2021/03/shutterstock_328883171.jpg"
+                className="image"
+              />
+              <div className="caption">Economics</div>
+            </div>
+
+            <div className="photo">
+              <img
+                src="https://uscenterforsafesport.org/wp-content/uploads/2022/08/FeaturedImage_Home_080922.png"
+                className="image"
+              />
+              <div className="caption">Sports</div>
+            </div>
+          </div>
+          {/* <section className="fixed_flex">
+            <figure className="flex_content">
               <img src={info} alt="" loading="lazy" />
             </figure>
-            <figure class="flex_content">
+            <figure className="flex_content">
               <img src={civil} alt="" loading="lazy" />
             </figure>
-            <figure class="flex_content">
+            <figure className="flex_content">
               <img src={eco} alt="" loading="lazy" />
             </figure>
-            <figure class="flex_content">
+            <figure className="flex_content">
               <img src={sports} alt="" loading="lazy" />
             </figure>
           </section> */}

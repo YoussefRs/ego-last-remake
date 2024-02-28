@@ -3,7 +3,7 @@ import Home from "./pages/home/Home";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/global/navbar/Navbar";
@@ -25,20 +25,20 @@ import Events from "./pages/event/Events";
 import News from "./pages/news/News";
 import NewDetails from "./pages/new-details/NewDetails";
 import RegistrationForm from "./pages/registration-form/RegistrationForm";
+import EnrollmentForm from "./pages/course-purchase/EnrollmentForm";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   const [showSideMenu, setShowSideMenu] = useState(false);
   const location = useLocation();
-  let showNormalNav =
-    ["/", "/about", "/team", "/jobs", "/courses", "/events", "/register"].includes(
-      location.pathname
-    ) ||
-    location.pathname.startsWith("/job") ||
-    location.pathname.startsWith("/course");
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <div className="app">
-      {showNormalNav ? <Navbar show={setShowSideMenu} /> : <NavbarTwo />}
+      <Navbar show={setShowSideMenu} />
       <SideMenu show={showSideMenu} handleShow={setShowSideMenu} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -47,15 +47,18 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/jobs" element={<Jobs />} />
+        {/* <Route path="/jobs" element={<Jobs />} /> */}
         <Route path="/courses" element={<Courses />} />
         <Route path="/events" element={<Events />} />
         <Route path="/news" element={<News />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/register" element={<RegistrationForm />} />
-        <Route path="/job/:slug" element={<JobDetails />} />
+        {/* <Route path="/job/:slug" element={<JobDetails />} /> */}
         <Route path="/course/:slug" element={<CourseDetails />} />
         <Route path="/news/:slug" element={<NewDetails />} />
+        <Route path="/enrollment" element={<EnrollmentForm />} />
+        <Route path="/course/:slug/enrollment" element={<EnrollmentForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
       <BackToTopButton />

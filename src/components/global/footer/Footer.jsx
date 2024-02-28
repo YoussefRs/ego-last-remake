@@ -74,14 +74,9 @@ const Footer = () => {
                     {/* Replace <i> with <FontAwesomeIcon> */}
                     <span className="adr-group float-left">
                       <span className="street-address">
-                        Shyamoli Engineering University
+                        40, Villa Fairholme, Sir Augustus Bartolo Street, Ta’
+                        Xbiex XBX 1095, Malta
                       </span>
-                      <br />
-                      <span className="region">Mandari, Sadar</span>
-                      <br />
-                      <span className="postal-code">Lakshmipur</span>
-                      <br />
-                      <span className="country-name">Bangladesh</span>
                     </span>
                   </p>
                   <p className="tel col-lg-12 col-md-4 col-12">
@@ -106,8 +101,9 @@ const Footer = () => {
       <div className="bottom-bar">
         <div className="container">
           <div className="row">
-            <small className="copyright col-lg-6 col-12">
-              All Copyright @ <a href="#">Group-B</a>
+            <small className="copyright col-lg-6 col-12 justify-content-center align-items-center d-flex flex-column w-100">
+              Copyright © 2024. All rights reserved.<br/>
+              <a href="/" className="m-0">www.ego-education.com</a>
             </small>
           </div>
         </div>

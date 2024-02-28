@@ -2,23 +2,22 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-import img1 from "../../../assets/images/slides/slide-4.jpg";
+import img1 from "../../../assets/images/1709110968814.jpg";
 
 const AboutWelcome = () => {
   return (
     <article className="welcome col-lg-8 col-md-7 col-12">
-      <h3 className="title">Welcome to Shyamoli Engineering University</h3>
+      <h3 className="title">Welcome to Ego Education</h3>
       <p>
         <img className="img-fluid rounded-lg" src={img1} alt="" />
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis
-        urna lectus, a euismod metus facilisis sed. Aliquam tristique sapien et
-        tincidunt semper. Mauris ornare, turpis ac molestie molestie, erat nisi
-        placerat ipsum, sit amet imperdiet ipsum lacus eu orci. Suspendisse
-        euismod mollis nibh eu rhoncus.
+        The International E-Learning Institute Ltd (IELI) is a company
+        established since October 23rd, 2017 in Malta, by deed C83113, created
+        by a decennial experience of its founders in the field of university
+        education.
       </p>
-      <ul className="custom-list-style">
+      {/* <ul className="custom-list-style">
         <li>
           <FontAwesomeIcon icon={faCheck} />
           Lorem ipsum dolor sit ame
@@ -39,30 +38,28 @@ const AboutWelcome = () => {
           <FontAwesomeIcon icon={faCheck} />
           Suspendisse bibendum tempor
         </li>
-      </ul>
+      </ul> */}
 
       <blockquote className="custom-quote">
         <p>
-          Viverra magna pellentesque in magnis gravida sit augue felis vehicula
-          vestibulum semper penatibus justo ornare semper Gravida felis platea
-          arcu mus non. Montes at posuere. Natoque.
+          With the new eGO brand, Ieli intends to initiate this
+          internationalization process through highly specialized, innovative
+          and professionalizing courses for active employment research.
         </p>
         <p className="people">
-          <span className="name">Principal M. A. Sattar</span>
+          <span className="name">Principal: Mr.Agostino Daniele Pallotta</span>
           <br />
-          <span className="title">
-            Founder & Chairman, Principal M. A. Sattar Trust
-          </span>
+          <span className="title">Founder & Chairman: Mr.Ernesto Pallotta</span>
         </p>
       </blockquote>
       <p>
-        Morbi semper. Hac euismod bibendum odio sed sociosqu primis magna
-        suscipit facilisi litora viverra eget nibh praesent vehicula luctus
-        Integer nostra ac duis metus orci. Vehicula praesent dolor quam montes
-        fames risus interdum. Tortor lacinia sem aenean sit tellus montes velit
-        ultricies leo eget felis mollis quam. Non odio leo tempus condimentum.
-        Neque. Potenti ornare sapien diam hymenaeos conubia ac. Euismod,
-        venenatis Vulputate sodales morbi aliquet sollicitudin.
+        Nowadays, IELI’s activities reflect those inherited by the Main Force
+        brand. Thus acquiring an important know-how in the field of distance
+        education and university internationalization on behalf of different
+        Italian universities. With more than 5,000 students enrolled through our
+        network, we have guaranteed constant support during their training: from
+        orientation to enrollment procedures, from technical support to study
+        assistance.
       </p>
     </article>
   );

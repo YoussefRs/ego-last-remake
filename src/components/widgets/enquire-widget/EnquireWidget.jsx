@@ -8,16 +8,16 @@ const EnquireWidget = () => {
     <section className="widget has-divider">
       <h3 className="title">Enquire about this course</h3>
       <p>
-        Donec pulvinar arcu lacus, vel aliquam libero scelerisque a. Cras mi
-        tellus, vulputate eu eleifend at, consectetur fringilla lacus. Nulla ut
-        purus.
+        If you're interested in learning more about this course, feel free to
+        get in touch with us.
       </p>
       <p className="tel">
-        <FontAwesomeIcon icon={faPhone} color="#046635" className="me-1" /> Tel: <a>+8801712345678</a>
+        <FontAwesomeIcon icon={faPhone} color="#046635" className="me-1" /> Tel:{" "}
+        <a>+8801712345678</a>
       </p>
       <p className="email">
-        <FontAwesomeIcon icon={faEnvelope} color="#046635" className="me-1" /> Email:{" "}
-        <Link>info@ego-education.com</Link>
+        <FontAwesomeIcon icon={faEnvelope} color="#046635" className="me-1" />{" "}
+        Email: <Link>info@ego-education.com</Link>
       </p>
     </section>
   );

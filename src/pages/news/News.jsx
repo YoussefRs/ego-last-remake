@@ -10,16 +10,16 @@ import useNews from "../../hooks/useNews";
 const News = () => {
   const newsData = useNews({ type: "all" });
   return (
-    <div class="content container">
-      <div class="page-wrapper">
+    <div className="content container">
+      <div className="page-wrapper">
         <SubHeader
           title={"News"}
           path={[{ url: "/", label: "Home" }]}
           current={"News"}
         />
-        <div class="page-content">
-          <div class="row page-row">
-            <div class="news-wrapper col-lg-8 col-md-7">
+        <div className="page-content">
+          <div className="row page-row">
+            <div className="news-wrapper col-lg-8 col-md-7">
               {newsData.map((el) => (
                 <article
                   className="news-item page-row has-divider clearfix row"
@@ -43,7 +43,7 @@ const News = () => {
                 </article>
               ))}
             </div>
-            <aside class="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
+            <aside className="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
               <UpcomingEventsWidget />
             </aside>
           </div>

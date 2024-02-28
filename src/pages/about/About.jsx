@@ -20,9 +20,9 @@ const About = () => {
           <div className="row page-row">
             <AboutWelcome />
             <aside className="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
-              <JobsOtherWidget
+              {/* <JobsOtherWidget
                 jobs={useJobs({ type: "random" })}
-              />
+              /> */}
               <VideoTourWidget />
               <ContactWidget />
             </aside>

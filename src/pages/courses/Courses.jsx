@@ -11,9 +11,9 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 const Courses = () => {
   const coursesSomeData = useCourse({
     type: "byProperties",
-    param: ["name", "thumb", "id"],
+    param: ["name", "thumb", "id", "institute", "degree"],
   });
-  const [activePane, setActivePane] = useState("Featured");
+  const [activePane, setActivePane] = useState("our_courses");
   return (
     <div className="content container">
       <div className="page-wrapper">
@@ -24,9 +24,23 @@ const Courses = () => {
         />
         <div className="page-content">
           <div className="row page-row">
-            <div className="courses-wrapper col-lg-8 col-md-7 col-12">
+            <div className="courses-wrapper col-lg-8 col-md-8 col-12">
               <div className="featured-courses tabbed-info page-row">
                 <ul className="nav nav-tabs">
+                  <li
+                    className="nav-item"
+                    onClick={() => {
+                      setActivePane("our_courses");
+                    }}
+                  >
+                    <Link
+                      className={`nav-link ${
+                        activePane === "our_courses" ? "active" : ""
+                      }`}
+                    >
+                      Our Courses
+                    </Link>
+                  </li>
                   <li
                     className="nav-item"
                     onClick={() => {
@@ -41,34 +55,6 @@ const Courses = () => {
                       Featured
                     </Link>
                   </li>
-                  <li
-                    className="nav-item"
-                    onClick={() => {
-                      setActivePane("Popular");
-                    }}
-                  >
-                    <Link
-                      className={`nav-link ${
-                        activePane === "Popular" ? "active" : ""
-                      }`}
-                    >
-                      Popular
-                    </Link>
-                  </li>
-                  <li
-                    className="nav-item"
-                    onClick={() => {
-                      setActivePane("New");
-                    }}
-                  >
-                    <Link
-                      className={`nav-link ${
-                        activePane === "New" ? "active" : ""
-                      }`}
-                    >
-                      New
-                    </Link>
-                  </li>
                 </ul>
                 <div className="tab-content">
                   <div
@@ -78,85 +64,114 @@ const Courses = () => {
                     id="tab1"
                   >
                     <div className="row">
-                      {coursesSomeData.map((crs) => (
-                        <div className="item col-lg-3 col-6" key={crs.id}>
-                          <img
-                            className="img-fluid rounded"
-                            src={crs.thumb}
-                            alt=""
-                          />
-                          <p className="text-start">
-                            <Link to={`/course/${crs.id}`}>
-                              <FontAwesomeIcon
-                                icon={faGraduationCap}
-                                className="me-1"
-                              />
-                              {crs.name}
-                            </Link>
-                          </p>
-                        </div>
-                      ))}
+                      <p
+                        className="col-12 fw-bold h4"
+                        style={{ color: "#046635" }}
+                      >
+                        Bachelor Degree
+                      </p>
+                      {coursesSomeData
+                        .filter(
+                          (course) =>
+                            course.institute === "Pegaso" &&
+                            course.degree === "Bachelor Degree"
+                        )
+                        .map((crs) => (
+                          <div className="item col-lg-3 col-6" key={crs.id}>
+                            <img
+                              className="img-fluid rounded courses-img"
+                              src={crs.thumb}
+                              alt=""
+                            />
+                            <p className="text-start">
+                              <Link to={`/course/${crs.id}`}>
+                                <FontAwesomeIcon
+                                  icon={faGraduationCap}
+                                  className="me-1"
+                                />
+                                {crs.name}
+                              </Link>
+                            </p>
+                          </div>
+                        ))}
+                    </div>
+                    <div className="row">
+                      <p
+                        className="col-12 fw-bold h4"
+                        style={{ color: "#046635" }}
+                      >
+                        Master Degree
+                      </p>
+                      {coursesSomeData
+                        .filter(
+                          (course) =>
+                            course.institute === "Pegaso" &&
+                            course.degree === "Master Degree"
+                        )
+                        .map((crs) => (
+                          <div className="item col-lg-3 col-6" key={crs.id}>
+                            <img
+                              className="img-fluid rounded courses-img"
+                              src={crs.thumb}
+                              alt=""
+                            />
+                            <p className="text-start">
+                              <Link to={`/course/${crs.id}`}>
+                                <FontAwesomeIcon
+                                  icon={faGraduationCap}
+                                  className="me-1"
+                                />
+                                {crs.name}
+                              </Link>
+                            </p>
+                          </div>
+                        ))}
                     </div>
                   </div>
                   <div
                     className={`tab-pane ${
-                      activePane === "Popular" ? "active" : ""
+                      activePane === "our_courses" ? "active" : ""
                     }`}
                     id="tab2"
                   >
                     <div className="row">
-                      {coursesSomeData.map((crs) => (
-                        <div className="item col-lg-3 col-6" key={crs.id}>
-                          <img
-                            className="img-fluid rounded"
-                            src={crs.thumb}
-                            alt=""
-                          />
-                          <p className="text-start">
-                            <Link to={`/course/${crs.id}`}>
-                              <FontAwesomeIcon
-                                icon={faGraduationCap}
-                                className="me-1"
-                              />
-                              {crs.name}
-                            </Link>
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div
-                    className={`tab-pane ${
-                      activePane === "New" ? "active" : ""
-                    }`}
-                    id="tab3"
-                  >
-                    <div className="row">
-                      {coursesSomeData.map((crs) => (
-                        <div className="item col-lg-3 col-6" key={crs.id}>
-                          <img
-                            className="img-fluid rounded"
-                            src={crs.thumb}
-                            alt=""
-                          />
-                          <p className="text-start">
-                            <Link to={`/course/${crs.id}`}>
-                              <FontAwesomeIcon
-                                icon={faGraduationCap}
-                                className="me-1"
-                              />
-                              {crs.name}
-                            </Link>
-                          </p>
-                        </div>
-                      ))}
+                      <p
+                        className="col-12 fw-bold h4"
+                        style={{ color: "#046635" }}
+                      >
+                        Master Degree
+                      </p>
+                      {coursesSomeData
+                        .filter((course) => course.institute === "Ego")
+                        .map((crs) => (
+                          <div className="item col-lg-3 col-6" key={crs.id}>
+                            <img
+                              className="img-fluid rounded courses-img"
+                              src={crs.thumb}
+                              alt=""
+                            />
+                            <p className="text-start">
+                              <Link to={`/course/${crs.id}`}>
+                                <FontAwesomeIcon
+                                  icon={faGraduationCap}
+                                  className="me-1"
+                                />
+                                {crs.name}
+                              </Link>
+                            </p>
+                          </div>
+                        ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <aside className="page-sidebar  col-lg-3 offset-lg-1 col-md-4 offset-md-1">
-              <ApplyWidget />
+              <div className="right_box">
+                <div className="p-4">
+                  <ApplyWidget />
+                </div>
+              </div>
             </aside>
           </div>
         </div>
